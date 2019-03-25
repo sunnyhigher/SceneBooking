@@ -38,7 +38,8 @@ class HD_BaseTabBarController: CYLTabBarController {
         let learnNVC = RTContainerNavigationController(rootViewController: HD_MessageViewController())
         learnNVC.navigationBar.barTintColor = UIColor.blueColor
         
-        let mineNVC = RTContainerNavigationController(rootViewController: HD_MineViewController())
+        let mineNVC = RTContainerNavigationController(rootViewController: HD_MineViewController.loadStoryboard())
+        
         mineNVC.navigationBar.barTintColor = UIColor.blueColor
         return [homeNVC, learnNVC, mineNVC]
     }

@@ -16,8 +16,10 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 19 images.
+  /// This `R.image` struct is generated, and contains static references to 20 images.
   struct image {
+    /// Image `guoer_none`.
+    static let guoer_none = Rswift.ImageResource(bundle: R.hostingBundle, name: "guoer_none")
     /// Image `icon_arrow_right_gray`.
     static let icon_arrow_right_gray = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_arrow_right_gray")
     /// Image `icon_back_white`.
@@ -56,6 +58,11 @@ struct R: Rswift.Validatable {
     static let 修改密码icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "修改密码icon")
     /// Image `更换头像icon`.
     static let 更换头像icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "更换头像icon")
+    
+    /// `UIImage(named: "guoer_none", bundle: ..., traitCollection: ...)`
+    static func guoer_none(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.guoer_none, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "icon_arrow_right_gray", bundle: ..., traitCollection: ...)`
     static func icon_arrow_right_gray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -322,11 +329,19 @@ struct _R: Rswift.Validatable {
     
     struct hd_MineViewController: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
+      let hd_MineViewController = StoryboardViewControllerResource<HD_MineViewController>(identifier: "HD_MineViewController")
       let name = "HD_MineViewController"
       
+      func hd_MineViewController(_: Void = ()) -> HD_MineViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: hd_MineViewController)
+      }
+      
       static func validate() throws {
+        if UIKit.UIImage(named: "guoer_none", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'guoer_none' is used in storyboard 'HD_MineViewController', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_arrow_right_gray", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_arrow_right_gray' is used in storyboard 'HD_MineViewController', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
+        if _R.storyboard.hd_MineViewController().hd_MineViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'hd_MineViewController' could not be loaded from storyboard 'HD_MineViewController' as 'HD_MineViewController'.") }
       }
       
       fileprivate init() {}

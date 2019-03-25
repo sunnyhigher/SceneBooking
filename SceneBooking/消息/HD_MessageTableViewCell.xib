@@ -71,7 +71,7 @@
                     <constraint firstItem="7Cb-mX-6vi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="bdJ-vp-0g8"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="contentLabel" destination="z2X-ub-qsV" id="adi-MJ-a1P"/>

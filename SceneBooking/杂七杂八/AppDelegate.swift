@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.rootVCForLoginVC()
         }
         
-        
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
