@@ -57,16 +57,18 @@ class HD_MineViewController: UITableViewController, StoryboardLoadable {
     
     
     @IBAction func exitBtnClick(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: "<#T##String#>")
+        UserDefaults.standard.removeObject(forKey: "user_id")
+        UserDefaults.standard.removeObject(forKey: "user_username")
+        UserDefaults.standard.removeObject(forKey: "user_head")
         myAppDelegate.rootVCForLoginVC()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                
+                self.rt_navigationController.pushViewController(HD_CollectionViewController(), animated: true) { (bool) in }
             } else {
-                
+                self.rt_navigationController.pushViewController(HD_ChangePasswordVC(), animated: true)
             }
         }
         

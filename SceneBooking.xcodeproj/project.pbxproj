@@ -11,6 +11,9 @@
 		11745B6222487A3C00420244 /* HD_MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11745B6122487A3C00420244 /* HD_MessageModel.swift */; };
 		11745B652248823800420244 /* HD_MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11745B632248823800420244 /* HD_MessageTableViewCell.swift */; };
 		11745B662248823800420244 /* HD_MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11745B642248823800420244 /* HD_MessageTableViewCell.xib */; };
+		11745B682248BBAE00420244 /* HD_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11745B672248BBAE00420244 /* HD_CollectionViewController.swift */; };
+		11745B6B2248BD9C00420244 /* HD_ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11745B692248BD9C00420244 /* HD_ChangePasswordVC.swift */; };
+		11745B6C2248BD9C00420244 /* HD_ChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11745B6A2248BD9C00420244 /* HD_ChangePasswordVC.xib */; };
 		117490F32238D4210084422D /* UIButton+LXExpandBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 117490E82238D4210084422D /* UIButton+LXExpandBtn.m */; };
 		117490F42238D4210084422D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117490EA2238D4210084422D /* Date+Extension.swift */; };
 		117490F52238D4210084422D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117490EB2238D4210084422D /* UIImage+Extension.swift */; };
@@ -68,6 +71,9 @@
 		11745B6122487A3C00420244 /* HD_MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_MessageModel.swift; sourceTree = "<group>"; };
 		11745B632248823800420244 /* HD_MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_MessageTableViewCell.swift; sourceTree = "<group>"; };
 		11745B642248823800420244 /* HD_MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HD_MessageTableViewCell.xib; sourceTree = "<group>"; };
+		11745B672248BBAE00420244 /* HD_CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_CollectionViewController.swift; sourceTree = "<group>"; };
+		11745B692248BD9C00420244 /* HD_ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_ChangePasswordVC.swift; sourceTree = "<group>"; };
+		11745B6A2248BD9C00420244 /* HD_ChangePasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HD_ChangePasswordVC.xib; sourceTree = "<group>"; };
 		117490E82238D4210084422D /* UIButton+LXExpandBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LXExpandBtn.m"; sourceTree = "<group>"; };
 		117490E92238D4210084422D /* UIView+Designable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Designable.h"; sourceTree = "<group>"; };
 		117490EA2238D4210084422D /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -240,6 +246,9 @@
 			children = (
 				118B7F2F224213DF0045026D /* HD_MineViewController.swift */,
 				1167B4BA2244AF1C00440C0E /* HD_MineViewController.storyboard */,
+				11745B672248BBAE00420244 /* HD_CollectionViewController.swift */,
+				11745B692248BD9C00420244 /* HD_ChangePasswordVC.swift */,
+				11745B6A2248BD9C00420244 /* HD_ChangePasswordVC.xib */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -420,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11E559392243578100AAA944 /* HD_HomeListTableViewCell.xib in Resources */,
+				11745B6C2248BD9C00420244 /* HD_ChangePasswordVC.xib in Resources */,
 				11E55949224486A300AAA944 /* HD_RegisterViewController.xib in Resources */,
 				117A3BCA22373E7F00A892AC /* LaunchScreen.storyboard in Resources */,
 				1167B4BB2244AF1C00440C0E /* HD_MineViewController.storyboard in Resources */,
@@ -548,6 +558,7 @@
 				117A3BEC2237536100A892AC /* HD_BaseConst.swift in Sources */,
 				118B7F30224213DF0045026D /* HD_MineViewController.swift in Sources */,
 				118B7F2C224211C60045026D /* HD_EmptyView.m in Sources */,
+				11745B6B2248BD9C00420244 /* HD_ChangePasswordVC.swift in Sources */,
 				117A3C18223759B700A892AC /* HD_RefreshFooter.swift in Sources */,
 				117A3C11223757EA00A892AC /* HD_BaseModel.swift in Sources */,
 				118B7F2E224213D60045026D /* HD_MessageViewController.swift in Sources */,
@@ -563,6 +574,7 @@
 				117A3BC022373E7D00A892AC /* AppDelegate.swift in Sources */,
 				117490F42238D4210084422D /* Date+Extension.swift in Sources */,
 				117A3BD722374DF000A892AC /* R.generated.swift in Sources */,
+				11745B682248BBAE00420244 /* HD_CollectionViewController.swift in Sources */,
 				117A3C17223759B700A892AC /* HD_RefreshHeader.swift in Sources */,
 				118B7F2522420DC80045026D /* UIView+Empty.m in Sources */,
 				11745B652248823800420244 /* HD_MessageTableViewCell.swift in Sources */,

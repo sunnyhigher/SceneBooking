@@ -162,8 +162,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
+    /// Nib `HD_ChangePasswordVC`.
+    static let hd_ChangePasswordVC = _R.nib._HD_ChangePasswordVC()
     /// Nib `HD_HomeListTableViewCell`.
     static let hd_HomeListTableViewCell = _R.nib._HD_HomeListTableViewCell()
     /// Nib `HD_LoginViewController`.
@@ -172,6 +174,12 @@ struct R: Rswift.Validatable {
     static let hd_MessageTableViewCell = _R.nib._HD_MessageTableViewCell()
     /// Nib `HD_RegisterViewController`.
     static let hd_RegisterViewController = _R.nib._HD_RegisterViewController()
+    
+    /// `UINib(name: "HD_ChangePasswordVC", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_ChangePasswordVC) instead")
+    static func hd_ChangePasswordVC(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.hd_ChangePasswordVC)
+    }
     
     /// `UINib(name: "HD_HomeListTableViewCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_HomeListTableViewCell) instead")
@@ -195,6 +203,10 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_RegisterViewController) instead")
     static func hd_RegisterViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.hd_RegisterViewController)
+    }
+    
+    static func hd_ChangePasswordVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.hd_ChangePasswordVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
     static func hd_HomeListTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HD_HomeListTableViewCell? {
@@ -265,6 +277,17 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _HD_LoginViewController.validate()
+    }
+    
+    struct _HD_ChangePasswordVC: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HD_ChangePasswordVC"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
     }
     
     struct _HD_HomeListTableViewCell: Rswift.NibResourceType {
