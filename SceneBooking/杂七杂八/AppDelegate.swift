@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Thread.sleep(forTimeInterval: 1.0)
         
-        self.rootVCForLoginVC()
+        if UserDefaults.standard.value(forKey: "user_id") != nil {
+            self.rootVCForTab()
+        } else {
+            self.rootVCForLoginVC()
+        }
+        
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true

@@ -155,12 +155,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
     /// Nib `HD_HomeListTableViewCell`.
     static let hd_HomeListTableViewCell = _R.nib._HD_HomeListTableViewCell()
     /// Nib `HD_LoginViewController`.
     static let hd_LoginViewController = _R.nib._HD_LoginViewController()
+    /// Nib `HD_MessageTableViewCell`.
+    static let hd_MessageTableViewCell = _R.nib._HD_MessageTableViewCell()
     /// Nib `HD_RegisterViewController`.
     static let hd_RegisterViewController = _R.nib._HD_RegisterViewController()
     
@@ -174,6 +176,12 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_LoginViewController) instead")
     static func hd_LoginViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.hd_LoginViewController)
+    }
+    
+    /// `UINib(name: "HD_MessageTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_MessageTableViewCell) instead")
+    static func hd_MessageTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.hd_MessageTableViewCell)
     }
     
     /// `UINib(name: "HD_RegisterViewController", in: bundle)`
@@ -190,6 +198,10 @@ struct R: Rswift.Validatable {
       return R.nib.hd_LoginViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
+    static func hd_MessageTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HD_MessageTableViewCell? {
+      return R.nib.hd_MessageTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HD_MessageTableViewCell
+    }
+    
     static func hd_RegisterViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.hd_RegisterViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
@@ -197,12 +209,19 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
+    /// Storyboard `HD_MineViewController`.
+    static let hd_MineViewController = _R.storyboard.hd_MineViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    
+    /// `UIStoryboard(name: "HD_MineViewController", bundle: ...)`
+    static func hd_MineViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.hd_MineViewController)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -269,6 +288,17 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _HD_MessageTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HD_MessageTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HD_MessageTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HD_MessageTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _HD_RegisterViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "HD_RegisterViewController"
@@ -285,8 +315,21 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try hd_MineViewController.validate()
       try launchScreen.validate()
       try main.validate()
+    }
+    
+    struct hd_MineViewController: Rswift.StoryboardResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "HD_MineViewController"
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+      }
+      
+      fileprivate init() {}
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

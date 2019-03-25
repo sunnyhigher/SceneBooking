@@ -46,7 +46,11 @@ class HD_WebVC: HD_BaseVC {
         webView?.scrollView.delegate = self
         webView?.navigationDelegate = self
         webView?.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: safeBottom, right: 0)
-        self.automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            webView?.scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         adaptScrollViewAdjust((webView?.scrollView)!)
         userController.add(self, name: "")
         

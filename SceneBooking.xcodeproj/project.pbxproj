@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1167B4BB2244AF1C00440C0E /* HD_MineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1167B4BA2244AF1C00440C0E /* HD_MineViewController.storyboard */; };
+		11745B6222487A3C00420244 /* HD_MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11745B6122487A3C00420244 /* HD_MessageModel.swift */; };
+		11745B652248823800420244 /* HD_MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11745B632248823800420244 /* HD_MessageTableViewCell.swift */; };
+		11745B662248823800420244 /* HD_MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11745B642248823800420244 /* HD_MessageTableViewCell.xib */; };
 		117490F32238D4210084422D /* UIButton+LXExpandBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 117490E82238D4210084422D /* UIButton+LXExpandBtn.m */; };
 		117490F42238D4210084422D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117490EA2238D4210084422D /* Date+Extension.swift */; };
 		117490F52238D4210084422D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117490EB2238D4210084422D /* UIImage+Extension.swift */; };
@@ -60,6 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1167B4BA2244AF1C00440C0E /* HD_MineViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HD_MineViewController.storyboard; sourceTree = "<group>"; };
+		11745B6122487A3C00420244 /* HD_MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_MessageModel.swift; sourceTree = "<group>"; };
+		11745B632248823800420244 /* HD_MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_MessageTableViewCell.swift; sourceTree = "<group>"; };
+		11745B642248823800420244 /* HD_MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HD_MessageTableViewCell.xib; sourceTree = "<group>"; };
 		117490E82238D4210084422D /* UIButton+LXExpandBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LXExpandBtn.m"; sourceTree = "<group>"; };
 		117490E92238D4210084422D /* UIView+Designable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Designable.h"; sourceTree = "<group>"; };
 		117490EA2238D4210084422D /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -220,6 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				118B7F2D224213D60045026D /* HD_MessageViewController.swift */,
+				11745B6122487A3C00420244 /* HD_MessageModel.swift */,
+				11745B632248823800420244 /* HD_MessageTableViewCell.swift */,
+				11745B642248823800420244 /* HD_MessageTableViewCell.xib */,
 			);
 			path = "消息";
 			sourceTree = "<group>";
@@ -228,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				118B7F2F224213DF0045026D /* HD_MineViewController.swift */,
+				1167B4BA2244AF1C00440C0E /* HD_MineViewController.storyboard */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -410,9 +422,11 @@
 				11E559392243578100AAA944 /* HD_HomeListTableViewCell.xib in Resources */,
 				11E55949224486A300AAA944 /* HD_RegisterViewController.xib in Resources */,
 				117A3BCA22373E7F00A892AC /* LaunchScreen.storyboard in Resources */,
+				1167B4BB2244AF1C00440C0E /* HD_MineViewController.storyboard in Resources */,
 				117A3BC722373E7F00A892AC /* Assets.xcassets in Resources */,
 				117A3BC522373E7D00A892AC /* Main.storyboard in Resources */,
 				11E559432244867D00AAA944 /* HD_LoginViewController.xib in Resources */,
+				11745B662248823800420244 /* HD_MessageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +565,9 @@
 				117A3BD722374DF000A892AC /* R.generated.swift in Sources */,
 				117A3C17223759B700A892AC /* HD_RefreshHeader.swift in Sources */,
 				118B7F2522420DC80045026D /* UIView+Empty.m in Sources */,
+				11745B652248823800420244 /* HD_MessageTableViewCell.swift in Sources */,
 				117A3BF82237574600A892AC /* HD_NoDataView.swift in Sources */,
+				11745B6222487A3C00420244 /* HD_MessageModel.swift in Sources */,
 				117490F72238D4210084422D /* String+Extension.swift in Sources */,
 				118B7F2622420DC80045026D /* UIView+LYExtension.m in Sources */,
 				11E559422244867D00AAA944 /* HD_LoginViewController.swift in Sources */,
