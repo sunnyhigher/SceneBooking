@@ -20,11 +20,11 @@ class HD_LoginModel: NSObject {
             if code == 1 {
                 let userDic = json["user"] as? NSDictionary
                 UserDefaults.standard.do {
-                    $0.set(userDic?["user_id"], forKey: "user_id")
-                    $0.set(userDic?["user_username"], forKey: "user_username")
+                    $0.setValue(userDic?["user_id"], forKey: "user_id")
+                    $0.setValue(userDic?["user_username"], forKey: "user_username")
                     var userHead = userDic?["user_head"] as? String
                     userHead = UrlHost + (userHead ?? "")
-                    $0.set(userHead, forKey: "user_head")
+                    $0.setValue(userHead, forKey: "user_head")
                     $0.synchronize()
                 }
             } else {

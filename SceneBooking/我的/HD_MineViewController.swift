@@ -12,6 +12,12 @@ import Alamofire
 
 class HD_MineViewController: UITableViewController, StoryboardLoadable {
     
+    
+    @IBOutlet weak var headButton: UIButton!
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configNavigationBarColorIsBlue()
@@ -20,7 +26,13 @@ class HD_MineViewController: UITableViewController, StoryboardLoadable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let imglink = UserDefaults.standard.string(forKey: "user_head")
+        let url = URL(string: imglink!.urlEncoded())
+        let resource = ImageResource(downloadURL: url!)
+        headButton.kf.setImage(with: resource, for: .normal, placeholder:R.image.guoer_none())
         
+        let userName = UserDefaults.standard.string(forKey: "user_username")
+        self.userNameLabel.text = userName ?? "用户名"
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -45,7 +57,8 @@ class HD_MineViewController: UITableViewController, StoryboardLoadable {
     
     
     @IBAction func exitBtnClick(_ sender: Any) {
-        
+        UserDefaults.standard.removeObject(forKey: "<#T##String#>")
+        myAppDelegate.rootVCForLoginVC()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -64,6 +77,9 @@ class HD_MineViewController: UITableViewController, StoryboardLoadable {
         
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
     
     func updateHeadImage() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
@@ -133,9 +149,27 @@ extension HD_MineViewController: UIImagePickerControllerDelegate,UINavigationCon
         let sizeImage = (image as! UIImage).resizeAndCropImage(toSize : CGSize.init(width: 200, height: 200))
         //  1. 图片上传
         showLoading()
-        let user_id = UserDefaults.standard.value(forKey: "user_id") as? String
-        upload(urlString: "http://47.95.242.241/blu/update.php", params: ["user_id": user_id ?? "-1"], images: [sizeImage], success: { (json) in
+        let userId = UserDefaults.standard.string(forKey: "user_id")
+        HDlog(userId)
+        upload(urlString: "http://47.95.242.241/blu/update.php", params: ["user_id": userId ?? ""], images: [sizeImage], success: { (json) in
             self.hidenLoading()
+            guard let dict = json as? Dictionary<String, Any> else { return }
+            guard let code = dict["code"] as? Int else { return }
+            if code == 1 {
+                UserDefaults.standard.do {
+                    var userHead = dict["path"] as? String
+                    userHead = UrlHost + (userHead ?? "")
+                    $0.setValue(userHead, forKey: "user_head")
+                }
+                
+                let imglink = UserDefaults.standard.string(forKey: "user_head")
+                let url = URL(string: imglink!.urlEncoded())
+                let resource = ImageResource(downloadURL: url!)
+                self.headButton.kf.setImage(with: resource, for: .normal, placeholder:R.image.guoer_none())
+                
+            } else {
+                self.showText("头像上传失败,请重新上传")
+            }
         }) { (error) in
             self.hidenLoading()
         }

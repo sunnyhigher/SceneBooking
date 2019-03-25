@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Thread.sleep(forTimeInterval: 1.0)
         
-        if UserDefaults.standard.value(forKey: "user_id") != nil {
+        if UserDefaults.standard.string(forKey: "user_id") != nil {
             self.rootVCForTab()
         } else {
             self.rootVCForLoginVC()
