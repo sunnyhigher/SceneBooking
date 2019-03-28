@@ -64,6 +64,7 @@ class HD_MineViewController: UITableViewController, StoryboardLoadable {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 self.rt_navigationController.pushViewController(HD_CollectionViewController(), animated: true) { (bool) in }
@@ -73,10 +74,10 @@ class HD_MineViewController: UITableViewController, StoryboardLoadable {
         }
         
         if indexPath.section == 1 {
-            
+            if indexPath.row == 0 {
+                self.rt_navigationController.pushViewController(HD_AboutMeViewController(), animated: true, complete: nil)
+            }
         }
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

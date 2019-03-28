@@ -19,7 +19,7 @@ class HD_DetailViewController: HD_BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        showLoading()
         self.view.addSubview(webView)
         webView.snp.makeConstraints {
             $0.left.right.top.bottom.equalTo(0)
@@ -33,10 +33,14 @@ class HD_DetailViewController: HD_BaseVC {
 
 extension HD_DetailViewController: UIWebViewDelegate {
     func webViewDidStartLoad(_ webView: UIWebView) {
-        showLoading()
+        
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        hidenLoading()
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         hidenLoading()
     }
     

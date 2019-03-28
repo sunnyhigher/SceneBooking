@@ -14,7 +14,6 @@ class HD_ChangePasswordVC: HD_BaseVC {
     
     @IBOutlet weak var rePasswordTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.removeFromSuperview()

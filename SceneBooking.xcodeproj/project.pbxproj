@@ -54,6 +54,10 @@
 		118B7F2E224213D60045026D /* HD_MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118B7F2D224213D60045026D /* HD_MessageViewController.swift */; };
 		118B7F30224213DF0045026D /* HD_MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118B7F2F224213DF0045026D /* HD_MineViewController.swift */; };
 		118B7F32224220B90045026D /* HD_HomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118B7F31224220B90045026D /* HD_HomeListModel.swift */; };
+		11D3F77A2248E1A9000E7420 /* HD_FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3F7782248E1A9000E7420 /* HD_FeedbackViewController.swift */; };
+		11D3F77B2248E1A9000E7420 /* HD_FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D3F7792248E1A9000E7420 /* HD_FeedbackViewController.xib */; };
+		11D3F77E2248EB17000E7420 /* HD_AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D3F77C2248EB17000E7420 /* HD_AboutMeViewController.swift */; };
+		11D3F77F2248EB17000E7420 /* HD_AboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D3F77D2248EB17000E7420 /* HD_AboutMeViewController.xib */; };
 		11E559382243578100AAA944 /* HD_HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E559362243578100AAA944 /* HD_HomeListTableViewCell.swift */; };
 		11E559392243578100AAA944 /* HD_HomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E559372243578100AAA944 /* HD_HomeListTableViewCell.xib */; };
 		11E5593B22436C8D00AAA944 /* HD_WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E5593A22436C8D00AAA944 /* HD_WebView.swift */; };
@@ -126,6 +130,10 @@
 		118B7F2D224213D60045026D /* HD_MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_MessageViewController.swift; sourceTree = "<group>"; };
 		118B7F2F224213DF0045026D /* HD_MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_MineViewController.swift; sourceTree = "<group>"; };
 		118B7F31224220B90045026D /* HD_HomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_HomeListModel.swift; sourceTree = "<group>"; };
+		11D3F7782248E1A9000E7420 /* HD_FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_FeedbackViewController.swift; sourceTree = "<group>"; };
+		11D3F7792248E1A9000E7420 /* HD_FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HD_FeedbackViewController.xib; sourceTree = "<group>"; };
+		11D3F77C2248EB17000E7420 /* HD_AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_AboutMeViewController.swift; sourceTree = "<group>"; };
+		11D3F77D2248EB17000E7420 /* HD_AboutMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HD_AboutMeViewController.xib; sourceTree = "<group>"; };
 		11E559362243578100AAA944 /* HD_HomeListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HD_HomeListTableViewCell.swift; sourceTree = "<group>"; };
 		11E559372243578100AAA944 /* HD_HomeListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HD_HomeListTableViewCell.xib; sourceTree = "<group>"; };
 		11E5593A22436C8D00AAA944 /* HD_WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HD_WebView.swift; sourceTree = "<group>"; };
@@ -249,6 +257,10 @@
 				11745B672248BBAE00420244 /* HD_CollectionViewController.swift */,
 				11745B692248BD9C00420244 /* HD_ChangePasswordVC.swift */,
 				11745B6A2248BD9C00420244 /* HD_ChangePasswordVC.xib */,
+				11D3F7782248E1A9000E7420 /* HD_FeedbackViewController.swift */,
+				11D3F7792248E1A9000E7420 /* HD_FeedbackViewController.xib */,
+				11D3F77C2248EB17000E7420 /* HD_AboutMeViewController.swift */,
+				11D3F77D2248EB17000E7420 /* HD_AboutMeViewController.xib */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -429,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11E559392243578100AAA944 /* HD_HomeListTableViewCell.xib in Resources */,
+				11D3F77B2248E1A9000E7420 /* HD_FeedbackViewController.xib in Resources */,
 				11745B6C2248BD9C00420244 /* HD_ChangePasswordVC.xib in Resources */,
 				11E55949224486A300AAA944 /* HD_RegisterViewController.xib in Resources */,
 				117A3BCA22373E7F00A892AC /* LaunchScreen.storyboard in Resources */,
@@ -437,6 +450,7 @@
 				117A3BC522373E7D00A892AC /* Main.storyboard in Resources */,
 				11E559432244867D00AAA944 /* HD_LoginViewController.xib in Resources */,
 				11745B662248823800420244 /* HD_MessageTableViewCell.xib in Resources */,
+				11D3F77F2248EB17000E7420 /* HD_AboutMeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,9 +587,11 @@
 				117A3BEF2237563200A892AC /* HD_StaticFunc.swift in Sources */,
 				117A3BC022373E7D00A892AC /* AppDelegate.swift in Sources */,
 				117490F42238D4210084422D /* Date+Extension.swift in Sources */,
+				11D3F77E2248EB17000E7420 /* HD_AboutMeViewController.swift in Sources */,
 				117A3BD722374DF000A892AC /* R.generated.swift in Sources */,
 				11745B682248BBAE00420244 /* HD_CollectionViewController.swift in Sources */,
 				117A3C17223759B700A892AC /* HD_RefreshHeader.swift in Sources */,
+				11D3F77A2248E1A9000E7420 /* HD_FeedbackViewController.swift in Sources */,
 				118B7F2522420DC80045026D /* UIView+Empty.m in Sources */,
 				11745B652248823800420244 /* HD_MessageTableViewCell.swift in Sources */,
 				117A3BF82237574600A892AC /* HD_NoDataView.swift in Sources */,
@@ -746,19 +762,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5FM63V954T;
+				DEVELOPMENT_TEAM = SDVRD77NYR;
 				INFOPLIST_FILE = "SceneBooking/杂七杂八/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xinrui.duan.SceneBooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scenebook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SceneBooking/杂七杂八/SceneBooking-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -769,18 +785,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5FM63V954T;
+				DEVELOPMENT_TEAM = SDVRD77NYR;
 				INFOPLIST_FILE = "SceneBooking/杂七杂八/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xinrui.duan.SceneBooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scenebook.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SceneBooking/杂七杂八/SceneBooking-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

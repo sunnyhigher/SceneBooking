@@ -16,7 +16,7 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
-  /// This `R.image` struct is generated, and contains static references to 20 images.
+  /// This `R.image` struct is generated, and contains static references to 21 images.
   struct image {
     /// Image `guoer_none`.
     static let guoer_none = Rswift.ImageResource(bundle: R.hostingBundle, name: "guoer_none")
@@ -28,6 +28,8 @@ struct R: Rswift.Validatable {
     static let icon_header_background_750x425 = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_header_background_750x425")
     /// Image `icon_no_map`.
     static let icon_no_map = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_no_map")
+    /// Image `icon`.
+    static let icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon")
     /// Image `iocn_noNet`.
     static let iocn_noNet = Rswift.ImageResource(bundle: R.hostingBundle, name: "iocn_noNet")
     /// Image `noData`.
@@ -62,6 +64,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "guoer_none", bundle: ..., traitCollection: ...)`
     static func guoer_none(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.guoer_none, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "icon", bundle: ..., traitCollection: ...)`
+    static func icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_arrow_right_gray", bundle: ..., traitCollection: ...)`
@@ -162,10 +169,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
+    /// Nib `HD_AboutMeViewController`.
+    static let hd_AboutMeViewController = _R.nib._HD_AboutMeViewController()
     /// Nib `HD_ChangePasswordVC`.
     static let hd_ChangePasswordVC = _R.nib._HD_ChangePasswordVC()
+    /// Nib `HD_FeedbackViewController`.
+    static let hd_FeedbackViewController = _R.nib._HD_FeedbackViewController()
     /// Nib `HD_HomeListTableViewCell`.
     static let hd_HomeListTableViewCell = _R.nib._HD_HomeListTableViewCell()
     /// Nib `HD_LoginViewController`.
@@ -175,10 +186,22 @@ struct R: Rswift.Validatable {
     /// Nib `HD_RegisterViewController`.
     static let hd_RegisterViewController = _R.nib._HD_RegisterViewController()
     
+    /// `UINib(name: "HD_AboutMeViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_AboutMeViewController) instead")
+    static func hd_AboutMeViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.hd_AboutMeViewController)
+    }
+    
     /// `UINib(name: "HD_ChangePasswordVC", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_ChangePasswordVC) instead")
     static func hd_ChangePasswordVC(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.hd_ChangePasswordVC)
+    }
+    
+    /// `UINib(name: "HD_FeedbackViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.hd_FeedbackViewController) instead")
+    static func hd_FeedbackViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.hd_FeedbackViewController)
     }
     
     /// `UINib(name: "HD_HomeListTableViewCell", in: bundle)`
@@ -205,8 +228,16 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.hd_RegisterViewController)
     }
     
+    static func hd_AboutMeViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.hd_AboutMeViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+    
     static func hd_ChangePasswordVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.hd_ChangePasswordVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+    
+    static func hd_FeedbackViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.hd_FeedbackViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
     
     static func hd_HomeListTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HD_HomeListTableViewCell? {
@@ -279,9 +310,31 @@ struct _R: Rswift.Validatable {
       try _HD_LoginViewController.validate()
     }
     
+    struct _HD_AboutMeViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HD_AboutMeViewController"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _HD_ChangePasswordVC: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "HD_ChangePasswordVC"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HD_FeedbackViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HD_FeedbackViewController"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
@@ -377,6 +430,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
       
       static func validate() throws {
+        if UIKit.UIImage(named: "icon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
       }
